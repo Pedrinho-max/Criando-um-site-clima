@@ -1,0 +1,27 @@
+#app {
+  font-family: Arial, sans-serif;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #2e2eb4;
+  border-radius: 10px;
+  box-shadow: 0 5px 7px rgba(240, 234, 234, 0.959);
+}
+
+#weather-info {
+  display: none;
+  margin-top: 15px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
