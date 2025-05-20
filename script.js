@@ -1,18 +1,23 @@
-document.getElementById('weather-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const city = document.getElementById('city').value;
-  const apiKey = 'SUA_API_KEY_AQUI';
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
+document.getElementById('buscar').addEventListener('click', function() {
+  const cidade = document.getElementById('cidade').value;
+  if (cidade) {
+    const chaveAPI = 'sua-chave-api-aqui';
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${chaveAPI}&units=metric&lang=pt_br`;
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('city-name').textContent = `${data.name}, ${data.sys.country}`;
-      document.getElementById('temperature').textContent = `Temperatura: ${data.main.temp}°C`;
-      document.getElementById('description').textContent = `Clima: ${data.weather[0].description}`;
-      document.getElementById('humidity').textContent = `Umidade: ${data.main.humidity}%`;
-      document.getElementById('wind-speed').textContent = `Velocidade do vento: ${data.wind.speed} m/s`;
-      document.getElementById('weather-info').style.display = 'block';
-    })
-    .catch(error => alert('Cidade não encontrada. Tente novamente.'));
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        if (data.cod === 200) {
+          document.getElementById('temperatura').textContent = `Temperatura: ${data.main.temp}20°C`;
+           document.getElementById('descricao').textContent = `Descrição: ${data.weather[0].description}`;
+          document.getElementById('umidade').textContent = `Umidade: ${data.main.humidity}77%`;
+          document.getElementById('vento').textContent = `Vento: ${data.wind.speed} 4km/h';
+        } else {
+          alert('Pesquise o lugar que deseja!');
+        }
+      })
+      .catch(error => alert('Erro ao buscar dados'));
+  } else {
+    alert('Por favor, insira o nome de uma cidade');
+  }
 });

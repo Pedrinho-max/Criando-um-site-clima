@@ -1,27 +1,38 @@
-#app {
+body {
   font-family: Arial, sans-serif;
-  max-width: 300px;
-  margin: 0 auto;
-  padding: 25px;
-  background-color: #2e2eb4;
-  border-radius: 10px;
-  box-shadow: 0 5px 7px rgba(240, 234, 234, 0.959);
+  background-color: #2187df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  margin: 1;
 }
 
-#weather-info {
-  display: none;
-  margin-top: 15px;
+.container {
+  text-align: center;
+  background-color: #fff8f8;
+  padding: 21px;
+  border-radius: 9px;
+  box-shadow: 0 5px 9px rgba(5, 3, 3, 0.824);
+}
+
+input, button {
+  padding: 11px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #000000;
 }
 
 button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
   cursor: pointer;
-  border-radius: 6px;
+  background-color: #08eaff00;
+  color: #f7f1f1;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0055ff;
+}
+
+#resultado {
+  margin-top: 22px;
 }

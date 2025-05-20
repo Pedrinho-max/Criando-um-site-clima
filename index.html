@@ -1,15 +1,23 @@
-<div id="app">
-  <h2>Aplicativo de Clima</h2>
-  <form id="weather-form">
-    <input type="text" id="city" placeholder="São Paulo" required>
-    <button type="submit">Buscar</button>
-  </form>
-  <div id="weather-info">
-    <h3 id="São Paulo, Itaim Paulista"></h3>
-    <p id="16°C
-"></p>
-    <p id="As temperaturas podem mudar a qualquer momento"></p>
-    <p id="80% de humidade"></p>
-    <p id="10km/h"></p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplicativo de Clima</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Clima Atual</h1>
+    <input type="text" id="cidade" placeholder="Digite o nome da cidade">
+    <button id="buscar">Buscar</button>
+    <div id="resultado">
+      <p id="temperatura"></p>
+      <p id="descricao"></p>
+      <p id="umidade"></p>
+      <p id="vento"></p>
+    </div>
   </div>
-</div>
+  <script src="script.js"></script>
+</body>
+</html>
