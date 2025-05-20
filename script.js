@@ -21,3 +21,4 @@ document.getElementById('buscar').addEventListener('click', function() {
     alert('Por favor, insira o nome de uma cidade');
   }
 });
+
